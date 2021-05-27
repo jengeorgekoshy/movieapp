@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+:root{
+    --primary-color : #22254b;
+    --secondary-color : #373b69
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins',sans-serif;
+    margin: 0;
+    background-color: var(--primary-color);
+}
+header{
+    padding: 1.5rem;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+header h1{
+    margin: 0px;
+    color: #fff;
+    text-shadow: 3px 1px #d61c1c;
+    font-size: 40px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+.search{
+    margin-top: 5px;
+    border : 2px solid var(--primary-color);
+    border-radius: 50px;
+    background: transparent;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    color: #fff;
+}
+.search::placeholder{
+    color: #7378c5;
+}
+.search:focus{
+    outline: none;
+    background-color: var(--primary-color);
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.movie{
+    width: 300px;
+    margin: 1rem;
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+@media (max-width:400px){
+    .movie{
+        margin : 0;
+    }
+}
+.movie img{
+    width: 100%;
+}
+.movie-info{
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    letter-spacing: 0.5px;
+}
+.movie-info h3{
+    margin: 0;
+    margin-top: 0.25rem;
+}
+.movie-info span{
+    background-color: var(--primary-color);
+    font-weight: bold;
+    border-radius: 3px;
+    padding: 0.25rem .5rem;
+    max-height: 2rem;
+}
+.movie-info span.green{
+    color : #01d001;
+}
+.movie-info span.orange{
+    color : #ffbc26;
+}
+.movie-info span.red{
+    color : red;
+}
+.overview{
+    padding: 2rem;
+    background-color: #fff;
+    position: absolute;
+    max-height: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(101%);
+    transition : transform 0.3s ease-in ;
+}
+.movie:hover .overview{
+    transform: translateY(0);
+}
+.direction{
+    text-align: center;
+    margin: 2rem;
+}
+.fas{
+    margin : 8px;
+    cursor: pointer;
+}
+.fas.disabled{
+    cursor: no-drop;
+    color: #1d1e23;
+}
+button {
+    background: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+}
